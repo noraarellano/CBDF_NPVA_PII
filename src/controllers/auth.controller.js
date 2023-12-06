@@ -19,7 +19,7 @@ exports.login = async(req, res)=>{
                 })
             }else{
                 //Comparar las claves
-                const resultadoComparacion =await bcrypt.compare(clave, usuario.clave);
+                const resultadoComparacion = bcrypt.compare(clave, usuario.clave);
                 if(resultadoComparacion){
                     //Temporalmente 
                     res.status(200).json({
