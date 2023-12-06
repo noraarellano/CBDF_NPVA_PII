@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const userController = require('../controllers/auth.controller');
 
+router.get('/login', userController.login)
 router.get('/', userController.getAllUser);
 router.get('/:correo', userController.getAllUserByEmail);
 router.post('/', userController.addUser);
